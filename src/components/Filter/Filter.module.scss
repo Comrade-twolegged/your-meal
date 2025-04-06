@@ -1,0 +1,16 @@
+@use "../../assets/global/vars.scss" as *;
+
+.element{
+    display: flex;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 15px;
+    border: 2px solid $placeholder;
+    background-color: $placeholder;
+    transition: border-color 0.3s ease-in-out;
+
+    &:hover{
+        border-color: $accent-a;
+        cursor: pointer;
+    }
+}

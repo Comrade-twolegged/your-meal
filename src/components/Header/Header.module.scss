@@ -1,0 +1,75 @@
+@use "../../assets/global/vars.scss" as *;
+@use "../../assets//global/mixin.scss" as *;
+
+.circle {
+    position: absolute;
+    width: 2880px;
+    height: 2880px;
+    background-color: $accent-a;
+    border-radius: 100%;
+    overflow: hidden;
+    top: -950px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    color: $white;
+    gap: 24px;
+
+    p {
+        margin-top: 70px;
+    }
+}
+
+.burger {
+    margin-top: 24px;
+    margin-left: 50px;  
+    width: clamp(100px, 30vw, 326px);
+}
+
+.title {
+    font-weight: bold;
+    @include fluid-text(31px, 50px);
+
+    span {
+        color: $accent-b;
+    }
+}
+
+@media (max-width: $tablet) {
+    .info {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+
+        p {
+            margin-top: 25px;
+        }
+    }
+
+    .title {
+        margin: 0;
+    }
+
+    .burger {
+        margin: 0;
+        margin-top: auto;
+    }
+
+    .circle{
+        overflow: hidden;
+    }
+}

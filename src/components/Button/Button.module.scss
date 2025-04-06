@@ -1,0 +1,17 @@
+@use "../../assets/global/vars.scss" as *;
+
+.btt{
+    padding: 11px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.accentB{
+    background-color: $accent-b;
+    color: $white;
+}
+
+.placeholder{
+    background-color: $placeholder;
+    color: $dark;
+}

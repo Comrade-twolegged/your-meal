@@ -1,0 +1,39 @@
+@use "../../assets/global/vars.scss" as *;
+
+.basket{
+    width: 300px;
+    background-color: $background;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.content{
+    height: clamp(400px, 30vw, 600px);
+    overflow-y: auto;
+}
+
+.delivery{
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.together{
+    margin-bottom: 24px;
+}
+
+.countProducts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counts{
+    font-size: 24px;
+    background-color: $placeholder;
+    padding: 2px 20px;
+
+    border-radius: 16px;
+    align-items: center;
+}

@@ -1,0 +1,28 @@
+@use "../../../assets/global/vars.scss" as *;
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 12px;
+    gap: 10px;
+    align-items: center;
+    border-top: 3px solid $placeholder;
+    padding: 16px 0;
+}
+
+.weight{
+    color: #b1b1b1;
+    margin-bottom: 6px;
+}
+
+.grup{
+    position: relative;
+
+    .reset{
+        font-weight: bold;
+        position: absolute;
+        color: rgb(226, 51, 51);
+        top: 50px;
+        left: 10px;
+    }
+}

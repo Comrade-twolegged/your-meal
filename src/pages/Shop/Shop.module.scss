@@ -1,0 +1,25 @@
+
+.filter{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 140px;
+}
+
+.mainContent{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+}
+
+.basket{
+    margin-top: 24px;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+}

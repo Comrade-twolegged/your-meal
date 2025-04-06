@@ -1,0 +1,102 @@
+@use "../../../assets/global/vars.scss" as *;
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalContent {
+    position: relative;
+    width: 700px;
+    height: 424px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.titlInfo {
+    width: 300px;
+}
+
+.title {
+    margin-bottom: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.image {
+    margin-bottom: 24px;
+
+    img {
+        width: 300px;
+        height: 220px;
+    }
+}
+
+.info {
+    margin-top: 75px;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.ingredients {
+    font-size: 12px;
+    margin-bottom: 45px;
+
+}
+
+.information {
+    height: 245px;
+    overflow-y: scroll;
+}
+
+.ingredTitle {
+    font-weight: bold;
+}
+
+.priceInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count {
+    display: flex;
+    font-size: 16px;
+    background-color: $placeholder;
+    border-radius: 12px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 80px;
+}
+
+
+.weight {
+    color: #d3d3d3;
+    margin-top: 7px;
+}
+
+.back{
+    position: absolute;
+    top: 25px;
+    font-size: 20px;
+    font-weight: 100;
+    left: 94%;
+}

@@ -1,0 +1,12 @@
+@use "../../assets/global/vars.scss" as *;
+
+.count{
+    display: flex;
+    font-size: 16px;
+    background-color: $placeholder;
+    border-radius: 12px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}

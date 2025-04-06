@@ -1,0 +1,41 @@
+@use "../../assets/global/vars.scss" as *;
+
+.container{
+    background-color: $background;
+}
+
+.footer{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 244px;
+}
+
+.watermarks{
+    margin-top: 59px;
+    font-size: 12px;
+}
+
+.footerInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact{
+    display: flex;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.socialNetworks{
+    display: flex;
+    gap: 16px;
+}
