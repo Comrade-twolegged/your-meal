@@ -1,5 +1,6 @@
 @use "./vars.scss" as *;
 @use "./mixin.scss" as *;
+@use "./reset.scss" as *;
 
 body {
     font-family: $font-main;
@@ -19,6 +20,7 @@ body {
     &--sm {
         max-width: 840px;
     }
+
 }
 
 .text-right {

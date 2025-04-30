@@ -11,6 +11,7 @@ export default function ProductPurchase({ product = [], closeModalWindow }) {
     const handAddProduct = () => {
         const productWithCount = { ...product, count };
         dispatch(addProduct(productWithCount));
+        closeModalWindow(false);
     }
 
     const handleModalContentClick = (e) => {
@@ -30,9 +31,8 @@ export default function ProductPurchase({ product = [], closeModalWindow }) {
             <div onClick={handleModalContentClick} className={style.modalContent}>
 
                 <div className={style.titlInfo}>
-                    <h2 className={`title-3 ${style.title}`}>{product.title}</h2>
-
                     <div className={style.image}>
+                        <h2 className={`title-3 ${style.title}`}>{product.title}</h2>
                         <img src={product.image} alt={product.title} />
                     </div>
 
@@ -61,7 +61,7 @@ export default function ProductPurchase({ product = [], closeModalWindow }) {
                     </div>
 
                     <div className={style.priceInfo}>
-                        
+
                         <div className={style.count}>
                             <button onClick={() => setCount(Math.max(1, count - 1))}>-</button>
                             <p className={style.number}>{count}</p>

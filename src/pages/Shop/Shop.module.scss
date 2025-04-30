@@ -1,25 +1,82 @@
+@use "../../assets/global/mixin.scss" as *;
+@use "../../assets/global/vars.scss" as *;
 
-.filter{
+.filter {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 24px;
     margin-top: 140px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
 }
 
-.mainContent{
+.mainContent {
     margin-top: 50px;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 30px;
+    justify-content: center;
+
+    @include respond(tablet) {
+        grid-template-columns: 1fr;
+    }
 }
 
-.basket{
+.basket {
     margin-top: 24px;
+    gap: 10px;
+    width: 100%;
 }
 
-.product{
+.product {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 30px;
+
+    @include respond(small-desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+.search {
+    display: flex;
+    gap: 20px;
+}
+
+.input{
+    width: 100%;
+    position: relative;
+    max-width: 500px;
+
+    input {
+        width: 100%;
+        padding: 10px 40px 10px 10px;   
+        background-color: $placeholder;
+        border-radius: 10px;
+        border: none;
+        box-sizing: border-box;
+      }
+    
+      &::before {
+        content: "";
+        position: absolute;
+        right: 12px; 
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/icon/serch.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+      }
 }

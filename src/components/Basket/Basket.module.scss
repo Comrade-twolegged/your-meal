@@ -1,35 +1,59 @@
 @use "../../assets/global/vars.scss" as *;
+@use "../../assets/global/mixin.scss" as *;
 
-.basket{
+.basket {
     width: 300px;
     background-color: $background;
     padding: 20px;
     border-radius: 15px;
+
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease;
+    overflow: hidden;
+
+    @include respond(tablet) {
+        width: 100%;
+    }
 }
 
-.content{
+.open {
+    max-height: 1000px;
+}
+
+.closed {
+    max-height: 80px;
+}
+
+.content {
     height: clamp(400px, 30vw, 600px);
     overflow-y: auto;
 }
 
-.delivery{
+.delivery {
     margin-top: 8px;
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-.together{
+.together {
     margin-bottom: 24px;
 }
 
-.countProducts{
+.countProducts {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include respond(tablet) {
+        width: 100%;
+    }
 }
 
-.counts{
+.counts {
     font-size: 24px;
     background-color: $placeholder;
     padding: 2px 20px;

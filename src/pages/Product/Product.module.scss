@@ -1,0 +1,119 @@
+@use "../../assets/global/vars.scss" as *;
+@use "../../assets/global/mixin.scss" as *;
+
+.btt {
+    margin-top: 140px;
+}
+
+.product {
+    margin-top: 10px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    justify-items: center;
+
+    @include respond(tablet){
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.titlInfo {
+    display: grid;
+    width: 400px;
+
+    @include respond(phone){
+        width: 200px;
+    }
+}
+
+.title {
+    margin-bottom: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.image {
+    margin-bottom: 24px;
+
+    @include respond(phone){
+        margin-bottom: 14px;
+    }
+
+    img {
+        width: 400px;
+        height: auto;
+    
+        @include respond(phone){
+            width: 200px;
+        }
+    }
+}
+
+.info {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+
+    @include respond(phone){
+        margin-top: 15px;
+    }
+}
+
+.description {
+    @include fluid-text(9px, 20px);
+    margin-bottom: 12px;
+}
+
+.ingredients {
+    @include fluid-text(8px, 18px);
+
+    @include respond(phone){
+        margin-bottom: 15px;
+    }
+}
+
+.ingredTitle {
+    font-weight: bold;
+}
+
+.priceInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count {
+    display: flex;
+    font-size: 19px;
+    background-color: $placeholder;
+    border-radius: 12px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 80px;
+}
+
+.weight {
+    color: #d3d3d3;
+    margin-top: 7px;
+}
+
+.back {
+    position: absolute;
+    top: 25px;
+    font-size: 20px;
+    font-weight: 100;
+    left: 94%;
+}
+
+.price {
+    font-size: 18px;
+}

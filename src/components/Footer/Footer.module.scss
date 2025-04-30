@@ -1,10 +1,11 @@
 @use "../../assets/global/vars.scss" as *;
+@use "../../assets/global/mixin.scss" as *;
 
-.container{
+.container {
     background-color: $background;
 }
 
-.footer{
+.footer {
     margin-top: 100px;
     display: grid;
     grid-template-columns: auto auto;
@@ -12,30 +13,73 @@
     align-items: center;
     padding: 20px;
     height: 244px;
+
+    @include respond(phone) {
+        padding: 0px;
+        gap: 15px;
+        margin-top: 50px;
+    }
 }
 
-.watermarks{
+.watermarks {
+    @include fluid-text(8px, 12px);
     margin-top: 59px;
-    font-size: 12px;
+
+    @include respond(phone) {
+        margin-top: 15px;
+    }
 }
 
-.footerInfo{
+.footerInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+
+    @include respond(phone) {
+        gap: 15px;
+    }
 }
 
-.contact{
+.contact {
     display: flex;
+
+    img{
+
+        @include respond(phone) {
+            width: 10px;
+        }
+    }
 }
 
-.title{
-    font-size: 24px;
+.title {
+    @include fluid-text(11px, 24px);
     font-weight: 600;
     margin-bottom: 24px;
+
+    @include respond(phone) {
+        margin-bottom: 10px;
+    }
 }
 
-.socialNetworks{
+.socialNetworks {
     display: flex;
     gap: 16px;
+
+    @include respond(phone) {
+        gap: 10px;
+    }
+
+    img{
+        @include respond(phone) {
+            width: 20px;
+            height: auto;
+        }
+    }
+}
+
+.phone{
+
+    @include respond(phone) {
+        font-size: 8px;
+    }
 }

@@ -1,4 +1,5 @@
 @use "../../assets/global/vars.scss" as *;
+@use "../../assets/global/mixin.scss" as *;
 
 .element{
     display: flex;
@@ -13,4 +14,17 @@
         border-color: $accent-a;
         cursor: pointer;
     }
+}
+
+.active{
+    background-color: $accent-a;
+}
+
+.icon{
+    width: 24px;
+
+    @include respond(tablet){
+        width: 15px;
+    }
+
 }

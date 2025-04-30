@@ -36,6 +36,10 @@
     margin-top: 24px;
     margin-left: 50px;  
     width: clamp(100px, 30vw, 326px);
+
+    @include respond(phone) {
+        width: 200px;
+    }
 }
 
 .title {

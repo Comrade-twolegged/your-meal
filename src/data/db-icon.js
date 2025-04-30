@@ -32,37 +32,37 @@ const dataIcon = [
         id: "4",
         title: "Комбо",
         image: icon4,
-        category: "burger"
+        category: "Combo"
     },
     {
         id: "5",
         title: "Шаурма",
         image: icon5,
-        category: "burger"
+        category: "Shawarma"
     },
     {
         id: "6",
         title: "Піца",
         image: icon6,
-        category: "burger"
+        category: "Pizza"
     },
     {
         id: "7",
         title: "Вок",
         image: icon7,
-        category: "burger"
+        category: "Wok"
     },
     {
         id: "8",
         title: "Десерти",
         image: icon8,
-        category: "burger"
+        category: "Dessert"
     },
     {
         id: "9",
         title: "Соуси",
         image: icon9,
-        category: "burger"
+        category: "Sauces"
     },
 
 ];

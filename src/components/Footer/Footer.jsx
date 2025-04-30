@@ -5,11 +5,11 @@ import vk from "../../assets/icon/vk.svg";
 import tl from "../../assets/icon/tl.svg";
 
 export default function Footer() {
-
+  
     return (
         <div className={style.container}>
             <div className="container">
-                <header className={style.footer}>
+                <footer className={style.footer}>
                     <div className={style.footerLogo}>
                         <div className={style.logo}>
                             <img src={logo} alt="logo" />
@@ -27,7 +27,7 @@ export default function Footer() {
 
                             <div className={style.contact}>
                                 <img src={phone} alt="phone" />
-                                <a href="#"><p className={style.phone}>+(099)833-381-11</p></a>
+                                <a href=""><p className={style.phone}>+(099)833-381-11</p></a>
                             </div>
 
                         </div>
@@ -36,12 +36,12 @@ export default function Footer() {
                             <h2 className={style.title}>Ми у соцмережах</h2>
 
                             <div className={style.socialNetworks}>
-                                <a href="#"><img src={vk} alt="vk" /></a>
-                                <a href="#"><img src={tl} alt="tl" /></a>
+                                <a href=""><img src={vk} alt="vk" /></a>
+                                <a href=""><img src={tl} alt="tl" /></a>
                             </div>
                         </div>
                     </div>
-                </header>
+                </footer>
             </div>
         </div>
     )

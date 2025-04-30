@@ -1,0 +1,135 @@
+@use "../../../assets/global/vars.scss" as *;
+@use "../../../assets/global/mixin.scss" as *;
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.modalContent {
+    position: relative;
+    width: 700px;
+    height: 424px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    animation: slideIn 0.3s ease forwards;
+
+    @include respond(tablet) {
+        height: 390px;
+        grid-template-columns: 1fr;
+        border-radius: 14px;
+    }
+}
+
+.image {
+    background-color: $accent-a;
+    margin: -16px 16px -16px -16px;
+    border-radius: 24px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.content{
+    height: 295px;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: 100% auto;
+    height: 100%;
+
+    input[type="text"] {
+        height: 40px;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: $placeholder;
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        height: 94%;
+    }
+}
+
+.contextForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.delivaryForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    div {
+        display: flex;
+        gap: 8px;
+    }
+}
+
+.radio {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.x {
+    position: absolute;
+    top: 15px;
+    font-size: 20px;
+    font-weight: 100;
+    left: 94%;
+}
+
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

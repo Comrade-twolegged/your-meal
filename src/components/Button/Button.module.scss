@@ -1,17 +1,23 @@
 @use "../../assets/global/vars.scss" as *;
 
-.btt{
+.btt {
     padding: 11px;
     width: 100%;
     border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
 }
 
-.accentB{
+.accentB {
     background-color: $accent-b;
     color: $white;
 }
 
-.placeholder{
+.placeholder {
     background-color: $placeholder;
     color: $dark;
 }
